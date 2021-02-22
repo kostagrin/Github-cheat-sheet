@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 20px;
+    color: rgb(83, 83, 83);
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin-top: 40px;
+}
+
+section {
+    padding: 100px 0;
+    box-shadow: 2px 2px 3px #efefef;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+
+.row {
+	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    margin: 0 auto;
+}
+
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+
+.row:after {
+    clear:both;
+}
+
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    text-align: center;
+    word-spacing: 4px;
+}
+
+h2 {
+    margin-top: 70px;
+
+}
+
+.commands {
+    padding: 10px 0 10px 30px;
+    max-width: 1000px;
+    background-color: #f0f8ff;
+    font-size: 120%;
+    }

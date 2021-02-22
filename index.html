@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Git and Github Tutorial</title>
+</head>
+
+<body>
+    <h1 class="row">Git and Github Tutorial</h1>
+    <div class="row">
+        <h2>Command line basics</h2>
+
+        <section>
+            <h3>check version</h3>
+            <div class="row commands">
+                <code>$ git --version</code>
+                <p>Displays Git version.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>check config settings</h3>
+            <div class="row commands">
+                <code>$ git config --list</code>
+                <p>Displays your Git configurations.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h3>git help</h3>
+            <div class="row commands">
+                <code>$ git help</code><br>
+                <code>$ git help &#60;verb&#62;</code><br>
+                <code>$ git &#60;verb&#62; --help </code>
+                <p>Displays either total list of help or a help for the quotation keyword.</p>
+            </div>
+        </section>
+      
+      
+        <section>
+            <h3>Initialize a repo from existing code</h3>
+            <div class="row commands">
+                <code>$ git init</code><br>
+                <p>Initializes a local repo (creates .git hidden file).</p><br>
+                <code>$ rm -rf .git</code>
+                <p>Removes .git directory (like any other directory)</p>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>Before first commit</h3>
+            <div class="row commands">
+                <code>$ git status</code><br>
+                <p>Shows current status - which files are tracked, untracked, modified ets.</p><br>
+                <code>$ touch .gitignore</code><br>
+                <p>Creates a gitignore file where we can keep files which we woudn't want to track.</p><br>
+            </div>
+        </section>
+
+        <section>
+            <h3>Add files to staging aria</h3>
+            <div class="row commands">
+                <code>$ git add &#60;file name&#62;</code><br>
+                <code>$ git add -A</code><br>
+                <code>$ git add .</code><br>
+                <p>Adds either certain file or all files to the staging area.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Remove files from staging area</h3>
+            <div class="row commands">
+                <code>$ git reset &#60;file name&#62;</code><br>
+                <p>Removes certain file from the staging area.</p><br>
+                <code>$ git reset</code><br>
+                <p>Removes all files from the staging area.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Commit</h3>
+            <div class="row commands">
+                <code>$ git commin -m "here description of the commit"</code><br>
+                <p>Commits files from the staging area to local repo.</p><br>
+                <code>$ git log</code><br>
+                <p>Provides data about commits.</p>
+            </div>
+        </section>
+ 
+        <section>
+            <h3>Cloning a remote repo</h3>
+            <div class="row commands">
+                <code>$ git clone &#60;url&#62; &#60;where to clone&#62;</code><br>
+                <code>$ git clone &#60;url&#62; .</code><br>
+                <p>Clones a remote repo to a local mashine (to current directory).</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>View info about remote repo</h3>
+            <div class="row commands">
+                <code>$ git remote -v</code><br>
+                <p>Provides info about remote repo.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Push commits to remote repo</h3>
+            <div class="row commands">
+                <code>$ git diff</code><br>
+                <p>Shows changes one can have made to the code.</p><br>
+                <code>$ git pull origin master</code><br>
+                <p>Before pushing need to pull updated data from the remote repo.</p><br>
+                <code>$ git push origin master</code><br>
+                <p>Push changes I've made to the remote repo.</p>
+            </div>
+        </section>
+        
+        <h2>Common workdflow</h2>
+        <section>
+            <h3>Create a branch for desired feature</h3>
+            <div class="row commands">
+                <code>$ git branch branch-name</code><br>
+                <p>Creates a new branch on local mashine.</p><br>
+                <code>$ git branch</code><br>
+                <p>Lists all local branches.</p><br>
+                <code>$ git checkout branch-name</code><br>
+                <p>Switches to the named branch.</p><br>
+            </div>
+        </section>
+
+        <section>
+        <h3>After commit push branch to remote</h3>
+            <div class="row commands">
+                <code>$ git push -u origin branch-name</code><br>
+                <p>Pushes new branch to the remote repo.</p><br>
+                <code>$ git branch</code><br>
+                <p>Lists all local branches.</p><br>
+                <code>$ git checkout branch-name</code><br>
+                <p>Switches to the named branch.</p><br>
+                <code>$ git branch -a</code><br>
+                <p>Lists all branches, local and remote.</p><br>
+            </div>
+        </section>
+
+        <section>
+        <h3>Merge a branch</h3>
+            <div class="row commands">
+                <code>$ git checkout master</code><br>
+                <p>Switch to the local master branch.</p><br>
+                <code>$ git pull origin master</code><br>
+                <p>Pull latest master branch from the remote repo.</p><br>
+                <code>$ git branch --merged</code><br>
+                <p>Shows if any merges were done.</p><br>
+                <code>$ git merge branch-name</code><br>
+                <p>Merges the feature branch to the master branch.</p><br>
+                <code>$ git push origin master</code><br>
+                <p>Pushes updated, merged master branch to the remote.</p><br>
+            </div>
+        </section>
+
+        <section>
+        <h3>Deleting a branch</h3>
+            <div class="row commands">
+                <code>$ git branch --merged</code><br>
+                <p>Double check all was done correctly.</p><br>
+                <code>$ git branch -d branch-name</code><br>
+                <p>Deletes named branch locally.</p><br>
+                <code>$ git branch -a</code><br>
+                <p>Shows that the feathre branch was deleted locally, but it still exists on the remote repo.</p><br>
+                <code>$ git push origin --delete branch-name</code><br>
+                <p>Deletes named branch on remote repo.</p><br>
+                <!-- <p>Merges the feature branch to the master branch.</p><br> -->
+                <code>$ git push origin master</code><br>
+                <p>Pushes updated, merged master branch to the remote.</p><br>
+            </div>
+        </section>
+
+        
+
+</body>
+
+</html>

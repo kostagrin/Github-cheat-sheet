@@ -3,7 +3,7 @@
 }
 
 html, body {
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(83, 83, 83);
     font-family: 'Lato', sans-serif;
 }
@@ -51,5 +51,4 @@ h2 {
     padding: 10px 0 10px 30px;
     max-width: 1000px;
     background-color: #f0f8ff;
-    font-size: 120%;
     }

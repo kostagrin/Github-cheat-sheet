@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h1 class="row">Git and Github Tutorial</h1>
+    <h1 class="row">Git and Github short Tutorial</h1>
     <div class="row">
         <h2>Command line basics</h2>
 
@@ -28,7 +28,7 @@
             <h3>check config settings</h3>
             <div class="row commands">
                 <code>$ git config --list</code>
-                <p>Displays your Git configurations.</p>
+                <p>Displays my Git configurations.</p>
             </div>
         </section>
         
@@ -36,8 +36,8 @@
             <h3>git help</h3>
             <div class="row commands">
                 <code>$ git help</code><br>
-                <code>$ git help &#60;verb&#62;</code><br>
-                <code>$ git &#60;verb&#62; --help </code>
+                <code>$ git help &lt;verb&gt;</code><br>
+                <code>$ git &lt;verb&gt; --help </code>
                 <p>Displays either total list of help or a help for the quotation keyword.</p>
             </div>
         </section>
@@ -47,9 +47,9 @@
             <h3>Initialize a repo from existing code</h3>
             <div class="row commands">
                 <code>$ git init</code><br>
-                <p>Initializes a local repo (creates .git hidden file).</p><br>
+                <p>Initializes a local repo (creates &nbsp;.git hidden file).</p><br>
                 <code>$ rm -rf .git</code>
-                <p>Removes .git directory (like any other directory)</p>
+                <p>Removes &nbsp;.git directory (like any other directory)</p>
             </div>
         </section>
  
@@ -59,14 +59,14 @@
                 <code>$ git status</code><br>
                 <p>Shows current status - which files are tracked, untracked, modified ets.</p><br>
                 <code>$ touch .gitignore</code><br>
-                <p>Creates a gitignore file where we can keep files which we woudn't want to track.</p><br>
+                <p>Creates a &nbsp;.gitignore file where we can keep files which we woudn't want to track.</p><br>
             </div>
         </section>
 
         <section>
             <h3>Add files to staging aria</h3>
             <div class="row commands">
-                <code>$ git add &#60;file name&#62;</code><br>
+                <code>$ git add &lt;file name&gt;</code><br>
                 <code>$ git add -A</code><br>
                 <code>$ git add .</code><br>
                 <p>Adds either certain file or all files to the staging area.</p>
@@ -76,7 +76,7 @@
         <section>
             <h3>Remove files from staging area</h3>
             <div class="row commands">
-                <code>$ git reset &#60;file name&#62;</code><br>
+                <code>$ git reset &lt;file name&gt;</code><br>
                 <p>Removes certain file from the staging area.</p><br>
                 <code>$ git reset</code><br>
                 <p>Removes all files from the staging area.</p>
@@ -96,8 +96,8 @@
         <section>
             <h3>Cloning a remote repo</h3>
             <div class="row commands">
-                <code>$ git clone &#60;url&#62; &#60;where to clone&#62;</code><br>
-                <code>$ git clone &#60;url&#62; .</code><br>
+                <code>$ git clone &lt;url&gt; &lt;where to clone&gt;</code><br>
+                <code>$ git clone &lt;url&gt; .</code><br>
                 <p>Clones a remote repo to a local mashine (to current directory).</p>
             </div>
         </section>
@@ -173,9 +173,9 @@
                 <code>$ git branch -d branch-name</code><br>
                 <p>Deletes named branch locally.</p><br>
                 <code>$ git branch -a</code><br>
-                <p>Shows that the feathre branch was deleted locally, but it still exists on the remote repo.</p><br>
+                <p>Shows that the feature branch was deleted locally, but it still exists on the remote repo.</p><br>
                 <code>$ git push origin --delete branch-name</code><br>
-                <p>Deletes named branch on remote repo.</p><br>
+                <p>Pushes updated data and deletes named branch on remote repo.</p><br>
                 <!-- <p>Merges the feature branch to the master branch.</p><br> -->
                 <code>$ git push origin master</code><br>
                 <p>Pushes updated, merged master branch to the remote.</p><br>

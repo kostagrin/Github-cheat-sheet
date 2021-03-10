@@ -17,7 +17,7 @@
         <h2>Command line basics</h2>
 
         <section>
-            <h3>check version</h3>
+            <h3>Check Git version</h3>
             <div class="row commands">
                 <code>$ git --version</code>
                 <p>Displays Git version.</p>
@@ -25,15 +25,15 @@
         </section>
 
         <section>
-            <h3>check config settings</h3>
+            <h3>Check config settings</h3>
             <div class="row commands">
                 <code>$ git config --list</code>
-                <p>Displays my Git configurations.</p>
+                <p>Displays Git configurations.</p>
             </div>
         </section>
         
         <section>
-            <h3>git help</h3>
+            <h3>Getting help</h3>
             <div class="row commands">
                 <code>$ git help</code><br>
                 <code>$ git help &lt;verb&gt;</code><br>
@@ -59,12 +59,12 @@
                 <code>$ git status</code><br>
                 <p>Shows current status - which files are tracked, untracked, modified ets.</p><br>
                 <code>$ touch .gitignore</code><br>
-                <p>Creates a &nbsp;.gitignore file where we can keep files which we woudn't want to track.</p><br>
+                <p>Creates a &nbsp;.gitignore file, which contains untracked folders and files.</p><br>
             </div>
         </section>
 
         <section>
-            <h3>Add files to staging aria</h3>
+            <h3>Add files to the staging aria</h3>
             <div class="row commands">
                 <code>$ git add &lt;file name&gt;</code><br>
                 <code>$ git add -A</code><br>
@@ -74,7 +74,7 @@
         </section>
 
         <section>
-            <h3>Remove files from staging area</h3>
+            <h3>Remove files from the staging area</h3>
             <div class="row commands">
                 <code>$ git reset &lt;file name&gt;</code><br>
                 <p>Removes certain file from the staging area.</p><br>
@@ -86,10 +86,10 @@
         <section>
             <h3>Commit</h3>
             <div class="row commands">
-                <code>$ git commit -m "here description of the commit"</code><br>
-                <p>Commits files from the staging area to local repo.</p><br>
-                <code>$ git commit -am "here description of the commit"</code><br>
-                <p>Adds files to the staging and commits them simultaneously area to local repo.</p><br>
+                <code>$ git commit -m "Description of the commit."</code><br>
+                <p>Commits files from the staging area to the local repo.</p><br>
+                <code>$ git commit -am "Description of the commit."</code><br>
+                <p>Adds files to the staging and commits them simultaneously to the  local repo.</p><br>
                 <code>$ git log</code><br>
                 <p>Provides data about commits.</p>
             </div>
@@ -127,13 +127,30 @@
             <h3>Create a branch for desired feature</h3>
             <div class="row commands">
                 <code>$ git branch branch-name</code><br>
-                <p>Creates a new branch on local mashine.</p><br>
+                <p>Creates a new branch on a local mashine.</p><br>
                 <code>$ git checkout -b -name</code><br>
-                <p>Creates a new branch on local mashine and switches to it at once.</p><br>
+                <p>Creates a new branch on a local mashine and switches to it at once.</p><br>
                 <code>$ git branch</code><br>
                 <p>Lists all local branches.</p><br>
                 <code>$ git checkout branch-name</code><br>
                 <p>Switches to the named branch.</p><br>
+            </div>
+        </section>
+
+        <section>
+            <h3>Move around commits</h3>
+            <div class="row commands">
+                <code>$ git log --oneline</code><br>
+                <p>Lists all loges in one line each. Hash tag is presented by 7 symbols (ec7489d).</p><br>
+                <code>$ git log --oneline -all</code><br>
+                <p>Lists all loges in one line each in case we are looking from some previous logs, not from last.</p><br>
+                <code>$ git cat-file -p ec7489d</code><br>
+                <p>Shows info of the specified commit (ec7489d). -p will print info readeble for human.</p><br>
+                <code>$ git checkout ec7489d</code><br>
+                <p>Will move to the specified commit (ec7489d).</p><br>
+                <code>$ git checkout -b commit-name ec7489d</code><br>
+                <p>Will move to the specified commit (ec7489d) and will attach a commit-name to it.</p><br>
+
             </div>
         </section>
 

@@ -64,6 +64,10 @@
                     <p>Prints changes in a file.</p>
                 </div>
                 <div class="block-box">
+                    <code>$ git diff --staged</code>
+                    <p>Prints changes in a staged file.</p>
+                </div>
+                <div class="block-box">
                     <code>$ git diff branch-name</code>
                     <p>Shows changes between branches.</p>
                 </div>
@@ -71,6 +75,10 @@
                     <code>$ git log --oneline -all</code>
                     <p>Prints detailed data about commits. --oneline:&nbsp; in one line for each commit; &nbsp;
                         -all:&nbsp; including all commits, if requested from somewhere in the middle of the tree.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git mv file-name.ext /dir-name new-file-name.ext</code>
+                    <p>Moves file-name.ext to another directory and changes its name to new-file-name.ext, simultaneously adds it to index.</p>
                 </div>
             </div>
 
@@ -109,8 +117,11 @@
                 <p>Adds files to the staging and commits them simultaneously to the local repo.</p>
             </div>
             <div class="block-box">
-                <code>$ git restore</code>
-                <p>Come back to last commit.</p>
+                <code>$ git restore</code><br>
+                <code>$ git restore &lt;file name&gt;</code><br>
+                <p>Undo changes and get back to the last commit (the whole project or specified file).</p>
+                <code>$ git restore --staged &lt;file name&gt;</code><br>
+                <p>Undo changes and withdraw from index (the whole project or specified file).</p>
             </div>
 
         </div>

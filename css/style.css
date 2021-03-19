@@ -47,9 +47,8 @@ section {
 }
 
 code {
-
+    font: 16px Lucida Console;
     background-color: #fff;
-    /* padding: 3px; */
 }
 
 p {

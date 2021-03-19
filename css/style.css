@@ -1,8 +1,9 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-size: 18px;
     color: rgb(83, 83, 83);
     font-family: 'Lato', sans-serif;
@@ -20,23 +21,44 @@ section {
 
 
 .row {
-	zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    zoom: 1;
+    /* For IE 6/7 (trigger hasLayout) */
     margin: 0 auto;
 }
 
 
 .row:before,
 .row:after {
-    content:"";
-    display:table;
+    content: "";
+    display: table;
 }
 
 .row:after {
-    clear:both;
+    clear: both;
 }
 
+.block-box {
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 10px 0 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    background-color: #f0f8ff;
+}
 
-h1, h2, h3 {
+code {
+
+    background-color: #fff;
+    /* padding: 3px; */
+}
+
+p {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3 {
     text-transform: uppercase;
     text-align: center;
     word-spacing: 4px;
@@ -50,5 +72,4 @@ h2 {
 .commands {
     padding: 10px 0 10px 30px;
     max-width: 1000px;
-    background-color: #f0f8ff;
-    }
+}

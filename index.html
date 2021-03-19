@@ -17,194 +17,260 @@
         <h2>Command line basics</h2>
 
         <section>
-            <h3>Check Git version</h3>
+            <h3>General info</h3>
             <div class="row commands">
-                <code>$ git --version</code>
-                <p>Displays Git version.</p>
+                <div class="block-box">
+                    <code>$ git --version</code>
+                    <p>Displays Git version.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git config --list</code>
+                    <p>Displays Git configurations.</p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <h3>Check config settings</h3>
-            <div class="row commands">
-                <code>$ git config --list</code>
-                <p>Displays Git configurations.</p>
-            </div>
-        </section>
-        
         <section>
             <h3>Getting help</h3>
             <div class="row commands">
-                <code>$ git help</code><br>
-                <code>$ git help &lt;verb&gt;</code><br>
-                <code>$ git &lt;verb&gt; --help </code>
-                <p>Displays either total list of help or a help for the quotation keyword.</p>
+                <div class="block-box">
+                    <code>$ git help</code><br>
+                    <code>$ git help &lt;verb&gt;</code><br>
+                    <code>$ git &lt;verb&gt; --help </code>
+                    <p>Displays either total list of help or a help for the quotation keyword.</p>
+                </div>
             </div>
         </section>
-      
-      
+
+
         <section>
             <h3>Initialize a repo from existing code</h3>
             <div class="row commands">
-                <code>$ git init</code><br>
-                <p>Initializes a local repo (creates &nbsp;.git hidden file).</p><br>
-                <code>$ rm -rf .git</code>
-                <p>Removes &nbsp;.git directory (like any other directory)</p>
+                <div class="block-box">
+                    <code>$ git init</code>
+                    <p>Initializes a local repo (creates &nbsp;.git hidden file).</p>
+                </div>
+                <div class="block-box">
+                    <code>$ rm -rf .git</code>
+                    <p>Removes &nbsp;.git directory (like any other directory)</p>
+                </div>
             </div>
         </section>
- 
+
         <section>
             <h3>Before first commit</h3>
             <div class="row commands">
-                <code>$ git status</code><br>
-                <p>Shows current status - which files are tracked, untracked, modified ets.</p><br>
-                <code>$ touch .gitignore</code><br>
-                <p>Creates a &nbsp;.gitignore file, which contains untracked folders and files.</p><br>
+                <div class="block-box">
+                    <code>$ git status</code>
+                    <p>Shows current status - which files are tracked, untracked, modified ets.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ touch .gitignore</code>
+                    <p>Creates a &nbsp;.gitignore file, which contains untracked folders and files.</p>
+                </div>
             </div>
         </section>
 
         <section>
-            <h3>Add files to the staging aria</h3>
+            <h3>Add/Remove files to/from the staging aria</h3>
             <div class="row commands">
-                <code>$ git add &lt;file name&gt;</code><br>
-                <code>$ git add -A</code><br>
-                <code>$ git add .</code><br>
-                <p>Adds either certain file or all files to the staging area.</p>
-            </div>
-        </section>
-
-        <section>
-            <h3>Remove files from the staging area</h3>
-            <div class="row commands">
-                <code>$ git reset &lt;file name&gt;</code><br>
-                <p>Removes certain file from the staging area.</p><br>
-                <code>$ git reset</code><br>
-                <p>Removes all files from the staging area.</p>
+                <div class="block-box">
+                    <code>$ git add &lt;file name&gt;</code><br>
+                    <code>$ git add -A</code><br>
+                    <code>$ git add .</code>
+                    <p>Adds either certain file or all files to the staging area.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git reset &lt;file name&gt;</code>
+                    <p>Removes certain file from the staging area.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git reset</code>
+                    <p>Removes all files from the staging area.</p>
+                </div>
             </div>
         </section>
 
         <section>
             <h3>Commit</h3>
             <div class="row commands">
-                <code>$ git commit -m "Description of the commit."</code><br>
-                <p>Commits files from the staging area to the local repo.</p><br>
-                <code>$ git commit -am "Description of the commit."</code><br>
-                <p>Adds files to the staging and commits them simultaneously to the  local repo.</p><br>
-                <code>$ git log</code><br>
-                <p>Provides data about commits.</p>
+                <div class="block-box">
+                    <code>$ git commit -m "Description of the commit."</code>
+                    <p>Commits files from the staging area to the local repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git commit -am "Description of the commit."</code>
+                    <p>Adds files to the staging and commits them simultaneously to the local repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git log</code>
+                    <p>Provides data about commits.</p>
+                </div>
             </div>
         </section>
- 
+
         <section>
             <h3>Cloning a remote repo</h3>
             <div class="row commands">
-                <code>$ git clone &lt;url&gt; &lt;where to clone&gt;</code><br>
-                <code>$ git clone &lt;url&gt; .</code><br>
-                <p>Clones a remote repo to a local mashine (to current directory).</p>
+                <div class="block-box">
+                    <code>$ git clone &lt;url&gt; &lt;where to clone&gt;</code><br>
+                    <code>$ git clone &lt;url&gt; .</code>
+                    <p>Clones a remote repo to a local mashine (to current directory).</p>
+                </div>
             </div>
         </section>
 
         <section>
             <h3>View info about remote repo</h3>
             <div class="row commands">
-                <code>$ git remote -v</code><br>
-                <p>Provides info about remote repo.</p>
+                <div class="block-box">
+                    <code>$ git remote -v</code>
+                    <p>Provides info about remote repo.</p>
+                </div>
             </div>
         </section>
 
         <section>
             <h3>Push commits to remote repo</h3>
             <div class="row commands">
-                <code>$ git pull origin master</code><br>
-                <p>Before pushing need to pull updated data from the remote repo.</p><br>
-                <code>$ git push origin master</code><br>
-                <p>Push changes I've made to the remote repo.</p>
+                <div class="block-box">
+                    <code>$ git pull origin master</code>
+                    <p>Before pushing need to pull updated data from the remote repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git push origin master</code>
+                    <p>Push changes I've made to the remote repo.</p>
+                </div>
             </div>
         </section>
-        
+
         <h2>Common workflow</h2>
         <section>
             <h3>Create a branch for desired feature</h3>
             <div class="row commands">
-                <code>$ git branch branch-name</code><br>
-                <p>Creates a new branch on a local mashine.</p><br>
-                <code>$ git checkout -b -name</code><br>
-                <p>Creates a new branch on a local mashine and switches to it at once.</p><br>
-                <code>$ git branch</code><br>
-                <p>Lists all local branches.</p><br>
-                <code>$ git checkout branch-name</code><br>
-                <p>Switches to the named branch.</p><br>
+                <div class="block-box">
+                    <code>$ git branch branch-name</code>
+                    <p>Creates a new branch on a local mashine.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git checkout -b -name</code>
+                    <p>Creates a new branch on a local mashine and switches to it at once.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch</code>
+                    <p>Lists all local branches.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git checkout branch-name</code>
+                    <p>Switches to the named branch.</p>
+                </div>
             </div>
         </section>
 
         <section>
             <h3>Move around commits</h3>
             <div class="row commands">
-                <code>$ git log --oneline</code><br>
-                <p>Lists all loges in one line each. Hash tag is presented by 7 symbols (ec7489d).</p><br>
-                <code>$ git log --oneline -all</code><br>
-                <p>Lists all loges in one line each in case we are looking from some previous logs, not from last.</p><br>
-                <code>$ git cat-file -p ec7489d</code><br>
-                <p>Shows info of the specified commit (ec7489d). -p will print info readeble for human.</p><br>
-                <code>$ git checkout ec7489d</code><br>
-                <p>Will move to the specified commit (ec7489d).</p><br>
-                <code>$ git checkout -b commit-name ec7489d</code><br>
-                <p>Will move to the specified commit (ec7489d) and will attach a commit-name to it.</p><br>
-
+                <div class="block-box">
+                    <code>$ git log --oneline</code>
+                    <p>Lists all loges in one line each. Hash tag is presented by 7 symbols (ec7489d).</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git log --oneline -all</code>
+                    <p>Lists all loges in one line each in case we are looking from some previous logs, not from last.
+                    </p>
+                </div>
+                <div class="block-box">
+                    <code>$ git cat-file -p ec7489d</code>
+                    <p>Shows info of the specified commit (ec7489d). -p will print info readeble for human.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git checkout ec7489d</code>
+                    <p>Will move to the specified commit (ec7489d).</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git checkout -b commit-name ec7489d</code>
+                    <p>Will move to the specified commit (ec7489d) and will attach a commit-name to it.</p>
+                </div>
             </div>
         </section>
 
         <section>
-        <h3>After commit push branch to remote</h3>
+            <h3>After commit push branch to remote</h3>
             <div class="row commands">
-                <code>$ git push -u origin branch-name</code><br>
-                <p>Pushes new branch to the remote repo.</p><br>
-                <code>$ git branch</code><br>
-                <p>Lists all local branches.</p><br>
-                <code>$ git checkout branch-name</code><br>
-                <p>Switches to the named branch.</p><br>
-                <code>$ git branch -a</code><br>
-                <p>Lists all branches, local and remote.</p><br>
+                <div class="block-box">
+                    <code>$ git push -u origin branch-name</code>
+                    <p>Pushes new branch to the remote repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch</code>
+                    <p>Lists all local branches.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git checkout branch-name</code>
+                    <p>Switches to the named branch.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch -a</code>
+                    <p>Lists all branches, local and remote.</p>
+                </div>
             </div>
         </section>
 
         <section>
-        <h3>Merge a branch</h3>
+            <h3>Merge a branch</h3>
             <div class="row commands">
-                <code>$ git checkout master</code><br>
-                <p>Switch to the local master branch.</p><br>
-                <code>$ git diff branch-name</code><br>
-                <p>Shows changes one can have made to the code.</p><br>
-                <code>$ git pull origin master</code><br>
-                <p>Pull latest master branch from the remote repo, in case of dealing with the remote.</p><br>
-                <code>$ git branch --merged</code><br>
-                <p>Shows if any merges were done.</p><br>
-                <code>$ git merge branch-name</code><br>
-                <p>Merges the feature branch to the master branch.</p><br>
-                <code>$ git push origin master</code><br>
-                <p>Pushes updated, merged master branch to the remote.</p><br>
+                <div class="block-box">
+                    <code>$ git checkout master</code>
+                    <p>Switch to the local master branch.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git diff branch-name</code>
+                    <p>Shows changes one can have made to the code.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git pull origin master</code>
+                    <p>Pull latest master branch from the remote repo, in case of dealing with the remote.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch --merged</code>
+                    <p>Shows if any merges were done.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git merge branch-name</code>
+                    <p>Merges the feature branch to the master branch.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git push origin master</code>
+                    <p>Pushes updated, merged master branch to the remote.</p>
+                </div>
             </div>
         </section>
 
         <section>
-        <h3>Deleting a branch</h3>
+            <h3>Deleting a branch</h3>
             <div class="row commands">
-                <code>$ git branch --merged</code><br>
-                <p>Double check all was done correctly.</p><br>
-                <code>$ git branch -d branch-name</code><br>
-                <p>Deletes named branch locally.</p><br>
-                <code>$ git branch -a</code><br>
-                <p>Shows that the feature branch was deleted locally, but it still exists on the remote repo.</p><br>
-                <code>$ git push origin --delete branch-name</code><br>
-                <p>Pushes updated data and deletes named branch on remote repo.</p><br>
-                <!-- <p>Merges the feature branch to the master branch.</p><br> -->
-                <code>$ git push origin master</code><br>
-                <p>Pushes updated, merged master branch to the remote.</p><br>
+                <div class="block-box">
+                    <code>$ git branch --merged</code>
+                    <p>Double check all was done correctly.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch -d branch-name</code>
+                    <p>Deletes named branch locally.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git branch -a</code>
+                    <p>Shows that the feature branch was deleted locally, but it still exists on the remote repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git push origin --delete branch-name</code>
+                    <p>Pushes updated data and deletes named branch on remote repo.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git push origin master</code>
+                    <p>Pushes updated, merged master branch to the remote.</p>
+                </div>
             </div>
         </section>
-
-        
-
 </body>
 
 </html>

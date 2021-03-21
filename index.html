@@ -78,15 +78,15 @@
                 </div>
                 <div class="block-box">
                     <code>$ git mv file-name.ext /dir-name new-file-name.ext</code>
-                    <p>Moves file-name.ext to another directory and changes its name to new-file-name.ext, simultaneously adds it to index.</p>
+                    <p>Moves file-name.ext to another directory and changes its name to new-file-name.ext,
+                        simultaneously adds it to index.</p>
                 </div>
             </div>
-
     </div>
     </section>
 
     <section>
-        <h3>Add/Remove files to/from the staging aria</h3>
+        <h3>Add/Remove files to/from the staging aria <br> Move around commits</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git add &lt;file name&gt;</code><br>
@@ -101,6 +101,10 @@
             <div class="block-box">
                 <code>$ git reset</code>
                 <p>Removes all files from the staging area.</p>
+            </div>
+            <div class="block-box">
+                <code>$ git reset --hard eb85e</code>
+                <p>Moves HEAD to the specified commit.</p>
             </div>
         </div>
     </section>
@@ -120,18 +124,18 @@
                 <code>$ git rm &lt;dir/file-name&gt;</code>
                 <p>Removes &lt;file-name&gt; from commit AND from working directory.</p>
             </div>
-            <div class="block-box"> 
+            <div class="block-box">
                 <code>$ git rm --cached &lt;dir/file-name&gt;</code>
                 <p>Removes &lt;file-name&gt; from commit ONLY.</p>
             </div>
             <div class="block-box">
                 <code>$ git commit --amend -m 'Corrected text here.'</code>
                 <p>Possible to make corrections to the LAST commit description.</p>
-             </div>
+            </div>
             <div class="block-box">
                 <code>$ git commit --amend --no-edit</code>
                 <p>Makes a commit with the previous description.</p>
-             </div>
+            </div>
             <div class="block-box">
                 <code>$ git restore</code><br>
                 <code>$ git restore &lt;file name&gt;</code><br>
@@ -146,8 +150,18 @@
 
     <div class="row">
         <h2>Dealing with remote repo</h2>
-
         <section>
+            <h3>Adding local project to remote repo</h3>
+            <div class="row commands">
+                <div class="block-box">
+                    <code>$ git remote add origin &lt;url&gt; .</code>
+                    <p>Creates a link between local project and remote repo (the one should be created on Github in advance).</p>
+                </div>
+                <div class="block-box">
+                    <code>$ git push origin master.</code>
+                    <p>Adds local project to the remote repo.</p>
+                </div>
+            </div>
             <h3>Cloning a remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
@@ -214,12 +228,10 @@
                 <code>$ git checkout branch-name</code>
                 <p>Switches to the named branch.</p>
             </div>
-
             <div class="block-box">
                 <code>$ git branch -d/-D branch-name</code>
                 <p>Deletes named branch locally.</p>
             </div>
-
             <div class="block-box">
                 <code>$ git push origin --delete branch-name</code>
                 <p>Pushes updated data and deletes named branch on remote repo.</p>
@@ -249,7 +261,6 @@
         </div>
     </section>
 
-
     <section>
         <h3>Merge a branch</h3>
         <div class="row commands">
@@ -257,7 +268,6 @@
                 <code>$ git checkout master</code>
                 <p>Switch to the local master branch.</p>
             </div>
-
             <div class="block-box">
                 <code>$ git pull origin master</code>
                 <p>Pull latest master branch from the remote repo, in case of dealing with the remote.</p>

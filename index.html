@@ -117,8 +117,18 @@
                 <p>Adds files to the staging and commits them simultaneously to the local repo.</p>
             </div>
             <div class="block-box">
+                <code>$ git rm &lt;dir/file-name&gt;</code>
+                <p>Removes &lt;file-name&gt; from commit AND from working directory.</p><br> 
+                <code>$ git rm --cached &lt;dir/file-name&gt;</code>
+                <p>Removes &lt;file-name&gt; from commit ONLY.</p>
+            </div>
+            <div class="block-box">
                 <code>$ git commit --amend -m 'Corrected text here.'</code>
                 <p>Possible to make corrections to the LAST commit description.</p>
+             </div>
+            <div class="block-box">
+                <code>$ git commit --amend --no-edit</code>
+                <p>Makes a commit with the previous description.</p>
              </div>
             <div class="block-box">
                 <code>$ git restore</code><br>

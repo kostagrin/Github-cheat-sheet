@@ -86,7 +86,7 @@
     </section>
 
     <section>
-        <h3>Add/Remove files to/from the staging aria <br> Move around commits</h3>
+        <h3>Add/Remove files to/from the staging aria<br> Move around commits<br> Reset changes</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git add &lt;file name&gt;</code><br>
@@ -105,6 +105,11 @@
             <div class="block-box">
                 <code>$ git reset --hard eb85e</code>
                 <p>Moves HEAD to the specified commit.</p>
+            </div>
+            <div class="block-box">
+                <code>$ git checkout file-name (index.html)</code>
+                <p>Resets all changes to the previous commit.</p>
+                <p>Resets deleted file back to its previous commited state.</p>
             </div>
         </div>
     </section>

@@ -66,15 +66,16 @@
                 <div class="block-box">
                     <code>$ git diff --staged</code>
                     <p>Prints changes in a staged file.</p>
-                </div>
-                <div class="block-box">
                     <code>$ git diff branch-name</code>
                     <p>Shows changes between branches.</p>
                 </div>
                 <div class="block-box">
-                    <code>$ git log --oneline --all</code>
-                    <p>Prints detailed data about commits. --oneline:&nbsp; in one line for each commit; &nbsp;
-                        -all:&nbsp; including all commits, if requested from somewhere in the middle of the tree.</p>
+                    <code>$ git log -2 --oneline --all --graph</code>
+                    <p>Prints detailed data about commits. <br>
+                        --oneline:&nbsp; in one line for each commit; <br>
+                        -2:&nbsp; number of last commits; <br>
+                        --all:&nbsp; including all commits, if requested from somewhere in the middle of the tree. <br>
+                        --graph:&nbsp; makes a graph.</p>
                 </div>
                 <div class="block-box">
                     <code>$ git mv file-name.ext /dir-name new-file-name.ext</code>
@@ -90,26 +91,25 @@
         <div class="row commands">
             <div class="block-box">
                 <code>$ git add &lt;file name&gt;</code><br>
-                <code>$ git add -A</code><br>
+                <p>Adds certain file to the staging area.</p>
                 <code>$ git add .</code>
-                <p>Adds either certain file or all files to the staging area.</p>
+                <p>Adds all files from the current directory to the staging area.</p>
+                <code>$ git add -A</code><br>
+                <p>Adds all files from the root directory to the staging area.</p>
             </div>
             <div class="block-box">
-                <code>$ git reset &lt;file name&gt;</code>
-                <p>Removes certain file from the staging area.</p>
+                <code>$ git checkout &lt;file-name&gt; (index.html)</code>
+                <p>Resets all changes to the previous commit.</p>
+                <p>Discard changes in working directory.</p>
+                <p>Resets deleted file back to its previous commited state.</p>
             </div>
             <div class="block-box">
                 <code>$ git reset</code>
                 <p>Removes all files from the staging area.</p>
-            </div>
-            <div class="block-box">
+                <code>$ git reset &lt;file name&gt;</code>
+                <p>Removes certain file from the staging area.</p>
                 <code>$ git reset --hard eb85e</code>
                 <p>Moves HEAD to the specified commit.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git checkout file-name (index.html)</code>
-                <p>Resets all changes to the previous commit.</p>
-                <p>Resets deleted file back to its previous commited state.</p>
             </div>
         </div>
     </section>

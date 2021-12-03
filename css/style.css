@@ -19,6 +19,9 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
 }
 
+p:not(:last-child) {
+    padding-bottom: 1.5rem;
+}
 
 .row {
     zoom: 1;

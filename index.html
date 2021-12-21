@@ -6,18 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/grid.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="sass/main.css">
     <title>Git and Github Tutorial</title>
 </head>
 
 <body>
     <h1 class="row">Git and Github short Tutorial</h1>
+    <ul id="nav" class="nav">
+        <li class="nav__list"><a href="#gen-info">General Info</a></li>
+        <li class="nav__list"><a href="#command-line">Command Line Commands</a>
+        </li>
+        <li class="nav__list"><a href="#move-around">Move around, make
+                changes</a></li>
+        <li class="nav__list"><a href="#commit">Commit</a></li>
+        <li class="nav__list"><a href="#local-remote">Remote Repo</a></li>
+        <li class="nav__list"><a href="#branches">Branches</a></li>
+        <li class="nav__list"><a href="#merge">Merge branches</a></li>
+    </ul>
+    <div class="nav-up">
+        <a href="#nav">Go Up</a>
+    </div>
+
     <div class="row">
         <h2>Command line basics</h2>
-
         <section>
-            <h3>General info</h3>
+            <h3 id="gen-info">General info</h3>
             <div class="row commands">
                 <div class="block-box">
                     <code>$ git --version</code>
@@ -29,36 +44,23 @@
                 </div>
                 <div class="block-box">
                     <code>$ git init</code>
-                    <p>Initializes a local repo (creates &nbsp;.git hidden file).</p>
+                    <p>Initializes a local repo (creates &nbsp;.git hidden
+                        file).</p>
                 </div>
-                <div class="block-box">
-                    <code>$ rm -rf .git</code>
-                    <p>Removes &nbsp;.git directory (like any other directory)</p>
-                </div>
+
                 <div class="block-box">
                     <code>$ git help</code><br>
                     <code>$ git help &lt;verb&gt;</code><br>
                     <code>$ git &lt;verb&gt; --help </code>
-                    <p>Displays either total list of help or a help for the quotation keyword.</p>
+                    <p>Displays either total list of help or a help for the
+                        quotation keyword.</p>
                 </div>
                 <div class="block-box">
                     <code>$ git status</code>
-                    <p>Shows current status - which files are tracked, untracked, modified ets.</p>
+                    <p>Shows current status - which files are tracked,
+                        untracked, modified ets.</p>
                 </div>
-                <div class="block-box">
-                    <code>$ touch .gitignore</code>
-                    <p>Creates a &nbsp;.gitignore file, which contains untracked folders and files.</p>
-                </div>
-                <div class="block-box">
-                    <code>$ ls -1 -a</code>
-                    <p style="display: inline; margin: 0 3px;">or</p>
-                    <code>$ ls -1a</code>
-                    <p>Lists all files. -1:&nbsp; in one column; -a:&nbsp; including hidden.</p>
-                </div>
-                <div class="block-box">
-                    <code>$ cat &lt;file name&gt;</code>
-                    <p>Prints file's content.</p>
-                </div>
+
                 <div class="block-box">
                     <code>$ git diff</code>
                     <p>Prints changes in a file.</p>
@@ -74,34 +76,59 @@
                     <p>Prints detailed data about commits. <br>
                         --oneline:&nbsp; in one line for each commit; <br>
                         -2:&nbsp; number of last commits; <br>
-                        --all:&nbsp; including all commits, if requested from somewhere in the middle of the tree. <br>
+                        --all:&nbsp; including all commits, if requested from
+                        somewhere in the middle of the tree. <br>
                         --graph:&nbsp; makes a graph.</p>
                 </div>
                 <div class="block-box">
-                    <code>$ git mv file-name.ext /dir-name new-file-name.ext</code>
-                    <p>Moves file-name.ext to another directory and changes its name to new-file-name.ext,
+                    <code>$ git mv file-name.ext /dir-name
+                        new-file-name.ext</code>
+                    <p>Moves file-name.ext to another directory and changes its
+                        name to new-file-name.ext,
                         simultaneously adds it to index.</p>
+                </div>
+            </div>
+            <h3 id="command-line">Command Line commands</h3>
+            <div class="row commands">
+                <div class="block-box">
+                    <code>$ rm -rf .git</code>
+                    <p>Removes &nbsp;.git directory (like any other directory)
+                    </p>
+                </div>
+                <div class="block-box">
+                    <code>$ touch &lt;file name&gt; (.gitignore)</code>
+                    <p>Creates a file (&nbsp;.gitignore file which contains
+                        untracked folders and files.)</p>
+                </div>
+                <div class="block-box">
+                    <code>$ ls -1 -a</code>
+                    <p style="display: inline; margin: 0 3px;">or</p>
+                    <code>$ ls -1a</code>
+                    <p>Lists all files. -1:&nbsp; in one column; -a:&nbsp;
+                        including hidden.</p>
+                </div>
+                <div class="block-box">
+                    <code>$ cat &lt;file name&gt;</code>
+                    <p>Prints file's content.</p>
                 </div>
             </div>
     </div>
     </section>
 
     <section>
-        <h3>Add/Remove files to/from the staging aria<br> Move around commits<br> Reset changes</h3>
+        <h3 id="move-around">Add/Remove files to/from the staging aria<br> Move
+            around
+            commits<br> Reset changes</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git add &lt;file name&gt;</code><br>
                 <p>Adds certain file to the staging area.</p>
                 <code>$ git add .</code>
-                <p>Adds all files from the current directory to the staging area.</p>
+                <p>Adds all files from the current directory to the staging
+                    area.</p>
                 <code>$ git add -A</code><br>
-                <p>Adds all files from the root directory to the staging area.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git checkout &lt;file-name&gt; (index.html)</code>
-                <p>Resets all changes to the previous commit.</p>
-                <p>Discard changes in working directory.</p>
-                <p>Resets deleted file back to its previous commited state.</p>
+                <p>Adds all files from the root directory to the staging area.
+                </p>
             </div>
             <div class="block-box">
                 <code>$ git reset</code>
@@ -111,11 +138,35 @@
                 <code>$ git reset --hard eb85e</code>
                 <p>Moves HEAD to the specified commit.</p>
             </div>
+            <div class="block-box">
+                <code>$ git checkout</code>
+                <p>Resets all changes to the previous commit.</p>
+                <code>$ git checkout &lt;file-name&gt; (index.html)</code>
+                <p>Discard changes in working directory.</p>
+                <code>$ git checkout ec7489d</code>
+                <p>Will move to the specified commit (ec7489d).</p>
+                <code>$ git checkout -b commit-name ec7489d</code>
+                <p>Will move to the specified commit (ec7489d) and will attach a
+                    commit-name to it.</p>
+            </div>
+        </div>
+        <!-- <h3>Move around commits</h3> -->
+        <div class="row commands">
+            <div class="block-box">
+                <code>$ git show ec7489d</code>
+                <p>Shows changes in a certain commit.</p>
+            </div>
+            <div class="block-box">
+                <code>$ git cat-file -p ec7489d</code>
+                <p>Shows info of the specified commit (ec7489d). -p will print
+                    info readeble for human.</p>
+            </div>
+
         </div>
     </section>
 
     <section>
-        <h3>Commit</h3>
+        <h3 id="commit">Commit</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git commit -m "Description of the commit."</code>
@@ -123,15 +174,18 @@
             </div>
             <div class="block-box">
                 <code>$ git commit -am "Description of the commit."</code>
-                <p>Adds files to the index and commits them simultaneously to the local repo.</p>
+                <p>Adds files to the index and commits them simultaneously to
+                    the local repo.</p>
             </div>
             <div class="block-box">
-                <code>$ git commit -m "Description of the commit." &lt;file.name&gt;</code>
+                <code>$ git commit -m "Description of the commit."
+                    &lt;file.name&gt;</code>
                 <p>Adds &lt;file.name&gt; to the index and commits it.</p>
             </div>
             <div class="block-box">
                 <code>$ git rm &lt;dir/file-name&gt;</code>
-                <p>Removes &lt;file-name&gt; from commit AND from working directory.</p>
+                <p>Removes &lt;file-name&gt; from commit AND from working
+                    directory.</p>
             </div>
             <div class="block-box">
                 <code>$ git rm --cached &lt;dir/file-name&gt;</code>
@@ -139,7 +193,8 @@
             </div>
             <div class="block-box">
                 <code>$ git commit --amend -m 'Corrected text here.'</code>
-                <p>Possible to make corrections to the LAST commit description.</p>
+                <p>Possible to make corrections to the LAST commit description.
+                </p>
             </div>
             <div class="block-box">
                 <code>$ git commit --amend --no-edit</code>
@@ -148,23 +203,26 @@
             <div class="block-box">
                 <code>$ git restore</code><br>
                 <code>$ git restore &lt;file name&gt;</code><br>
-                <p>Undo changes and get back to the last commit (the whole project or specified file).</p>
+                <p>Undo changes and get back to the last commit (the whole
+                    project or specified file).</p>
             </div>
             <div class="block-box">
                 <code>$ git restore --staged &lt;file name&gt;</code><br>
-                <p>Undo changes and withdraw from index (the whole project or specified file).</p>
+                <p>Undo changes and withdraw from index (the whole project or
+                    specified file).</p>
             </div>
         </div>
     </section>
 
     <div class="row">
-        <h2>Dealing with remote repo</h2>
+        <h2 id="local-remote">Dealing with remote repo</h2>
         <section>
             <h3>Adding local project to remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
                     <code>$ git remote add origin &lt;url&gt; .</code>
-                    <p>Creates a link between local project and remote repo (the one should be created on Github in advance).</p>
+                    <p>Creates a link between local project and remote repo (the
+                        one should be created on Github in advance).</p>
                 </div>
                 <div class="block-box">
                     <code>$ git push origin master.</code>
@@ -174,14 +232,13 @@
             <h3>Cloning a remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
-                    <code>$ git clone &lt;url&gt; &lt;where to clone&gt;</code><br>
+                    <code>$ git clone &lt;url&gt; &lt;where to
+                        clone&gt;</code><br>
                     <code>$ git clone &lt;url&gt; .</code>
-                    <p>Clones a remote repo to a local mashine (to current directory).</p>
+                    <p>Clones a remote repo to a local mashine (to current
+                        directory).</p>
                 </div>
             </div>
-        </section>
-
-        <section>
             <h3>View info about remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
@@ -189,14 +246,12 @@
                     <p>Provides info about remote repo.</p>
                 </div>
             </div>
-        </section>
-
-        <section>
             <h3>Push commits to remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
                     <code>$ git pull origin master</code>
-                    <p>Before pushing need to pull updated data from the remote repo.</p>
+                    <p>Before pushing need to pull updated data from the remote
+                        repo.</p>
                 </div>
                 <div class="block-box">
                     <code>$ git push -u origin branch-name</code>
@@ -211,7 +266,7 @@
     </div>
     <h2>Common workflow</h2>
     <section>
-        <h3>Branches</h3>
+        <h3 id="branches">Branches</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git branch</code>
@@ -231,7 +286,8 @@
             </div>
             <div class="block-box">
                 <code>$ git checkout -b -name</code>
-                <p>Creates a new branch on a local mashine and switches to it at once.</p>
+                <p>Creates a new branch on a local mashine and switches to it at
+                    once.</p>
             </div>
             <div class="block-box">
                 <code>$ git checkout branch-name</code>
@@ -243,35 +299,14 @@
             </div>
             <div class="block-box">
                 <code>$ git push origin --delete branch-name</code>
-                <p>Pushes updated data and deletes named branch on remote repo.</p>
+                <p>Pushes updated data and deletes named branch on remote repo.
+                </p>
             </div>
         </div>
     </section>
 
     <section>
-        <h3>Move around commits</h3>
-        <div class="row commands">
-            <div class="block-box">
-                <code>$ git show ec7489d</code>
-                <p>Shows changes in a certain commit.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git cat-file -p ec7489d</code>
-                <p>Shows info of the specified commit (ec7489d). -p will print info readeble for human.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git checkout ec7489d</code>
-                <p>Will move to the specified commit (ec7489d).</p>
-            </div>
-            <div class="block-box">
-                <code>$ git checkout -b commit-name ec7489d</code>
-                <p>Will move to the specified commit (ec7489d) and will attach a commit-name to it.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>Merge a branch</h3>
+        <h3 id="merge">Merge a branch</h3>
         <div class="row commands">
             <div class="block-box">
                 <code>$ git checkout master</code>
@@ -279,7 +314,8 @@
             </div>
             <div class="block-box">
                 <code>$ git pull origin master</code>
-                <p>Pull latest master branch from the remote repo, in case of dealing with the remote.</p>
+                <p>Pull latest master branch from the remote repo, in case of
+                    dealing with the remote.</p>
             </div>
             <div class="block-box">
                 <code>$ git branch --merged</code>

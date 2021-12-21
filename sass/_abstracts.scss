@@ -1,0 +1,15 @@
+$color-creamy-peach: #f3a683;
+$-color-satooth-aak: #f19066;
+$color-purple-mountain-majesty: #786fa6;
+$-color-purple-corallite: #574b90;
+
+@mixin at-hover {
+    transform: scale(1.05);
+    color: $color-purple-mountain-majesty;
+}
+
+@mixin at-click {
+    transform: scale(.95);
+    color: $-color-purple-corallite;
+    opacity: .5;
+}

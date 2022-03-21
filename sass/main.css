@@ -1,6 +1,15 @@
+.m-b {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
 a {
   text-decoration: none;
   color: #786fa6;
+}
+
+code {
+  display: inline-block;
 }
 
 * {

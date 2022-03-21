@@ -147,6 +147,26 @@
                 <code>$ git reset --hard eb85e</code>
                 <p>Moves HEAD to the specified commit.</p>
             </div>
+
+            <div class="block-box">
+                <code>$ git commit --amend -m 'Corrected text here.'</code><br>
+                <p>Possible to make corrections to description of the LAST commit.
+                </p>
+                </div>
+                <div class="block-box">
+                    <code>&lt;file-name--1&gt;</code><br>
+                    <code>&lt;file-name--2&gt;</code><br>
+                    <code class="m-b">&lt;forgotten file-name&gt;</code><br>
+                <code>$ git add &lt;file-name--1&gt; &lt;file-name--2&gt;</code><br>
+
+                <code class="m-b">$ git commit -m "commit message"</code><br>
+
+                <code>$ git add &lt;forgotten file-name&gt;</code><br>
+                <code>$ git commit --amend --no-edit</code><br>
+                <code>$ git commit --amend</code>
+                
+                <p>Possible to add a forgottent file to the LAST commit with or without  description corrections.</p>
+            </div>
             <div class="block-box">
                 <code>$ git checkout</code>
                 <p>Resets all changes to the previous commit.</p>
@@ -211,15 +231,6 @@
                 <code>$ git commit -m "Description of the commit."
                     &lt;file.name&gt;</code>
                 <p>Adds &lt;file.name&gt; to the index and commits it.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git commit --amend -m 'Corrected text here.'</code>
-                <p>Possible to make corrections to the LAST commit description.
-                </p>
-            </div>
-            <div class="block-box">
-                <code>$ git commit --amend --no-edit</code>
-                <p>Makes a commit with the previous description.</p>
             </div>
             <div class="block-box">
                 <code>$ git restore</code><br>

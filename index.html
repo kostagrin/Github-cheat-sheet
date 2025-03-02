@@ -8,7 +8,8 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <!-- <link rel="stylesheet" href="css/grid.css"> -->
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="sass/main.css">
+    <!-- <link rel="stylesheet" href="sass/main.css"> -->
+    <link rel="stylesheet" href="css/compile.css">
     <title>Git and Github Tutorial</title>
 </head>
 
@@ -32,6 +33,9 @@
     <div class="row">
         <h2>Command line basics</h2>
         <section>
+            <!-- /////////////////////////////////////////////// -->
+            <!--                  GENERAL INFO                   -->
+            <!-- /////////////////////////////////////////////// -->
             <h3 id="gen-info">General info</h3>
             <div class="row commands">
                 <div class="block-box">
@@ -81,6 +85,8 @@
                         --graph:&nbsp; makes a graph.</p>
                 </div>
                 <div class="block-box">
+                    <code>$ git mv file-name.ext new-file-name.ext</code>
+                    <p>Renames file-name.ext to a new-file-name.ext.</p>
                     <code>$ git mv file-name.ext /dir-name
                         new-file-name.ext</code>
                     <p>Moves file-name.ext to another directory and changes its
@@ -116,6 +122,10 @@
     </section>
 
     <section>
+        <!-- /////////////////////////////////////////////// -->
+        <!--             ADD/REMOVE TO INDEX                 -->
+        <!--         MOVE AROUND / RESET CHANGES             -->
+        <!-- /////////////////////////////////////////////// -->
         <h3 id="move-around">Add/Remove files to/from the staging aria<br> Move
             around
             commits<br> Reset changes</h3>
@@ -150,7 +160,25 @@
                     commit-name to it.</p>
             </div>
         </div>
-        <!-- <h3>Move around commits</h3> -->
+
+        <div class="row commands">
+            <div class="block-box">
+                <code>$ git rm &lt;dir/file-name&gt;</code>
+                <p>Removes &lt;file-name&gt; from commit AND from working
+                    directory.</p>
+                <code>$ git rm --cached &lt;dir/file-name&gt;</code>
+                <p>Removes &lt;file-name&gt; from commit ONLY.</p>
+            </div>
+        </div>
+       
+        <div class="row commands">
+            <div class="block-box">
+                <code>$ git stash</code>
+                <p>Archives non-commited changes. After this it's saftly possible to checkout.</p>
+                
+            </div>
+        </div>
+
         <div class="row commands">
             <div class="block-box">
                 <code>$ git show ec7489d</code>
@@ -166,6 +194,9 @@
     </section>
 
     <section>
+        <!-- /////////////////////////////////////////////// -->
+        <!--                     COMMIT                      -->
+        <!-- /////////////////////////////////////////////// -->
         <h3 id="commit">Commit</h3>
         <div class="row commands">
             <div class="block-box">
@@ -181,15 +212,6 @@
                 <code>$ git commit -m "Description of the commit."
                     &lt;file.name&gt;</code>
                 <p>Adds &lt;file.name&gt; to the index and commits it.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git rm &lt;dir/file-name&gt;</code>
-                <p>Removes &lt;file-name&gt; from commit AND from working
-                    directory.</p>
-            </div>
-            <div class="block-box">
-                <code>$ git rm --cached &lt;dir/file-name&gt;</code>
-                <p>Removes &lt;file-name&gt; from commit ONLY.</p>
             </div>
             <div class="block-box">
                 <code>$ git commit --amend -m 'Corrected text here.'</code>
@@ -217,6 +239,9 @@
     <div class="row">
         <h2 id="local-remote">Dealing with remote repo</h2>
         <section>
+            <!-- /////////////////////////////////////////////// -->
+            <!--                 LOCAL TO REMOTE                 -->
+            <!-- /////////////////////////////////////////////// -->
             <h3>Adding local project to remote repo</h3>
             <div class="row commands">
                 <div class="block-box">
@@ -264,8 +289,12 @@
             </div>
         </section>
     </div>
+
     <h2>Common workflow</h2>
     <section>
+        <!-- /////////////////////////////////////////////// -->
+        <!--                    BRANCHES                     -->
+        <!-- /////////////////////////////////////////////// -->
         <h3 id="branches">Branches</h3>
         <div class="row commands">
             <div class="block-box">
@@ -279,6 +308,8 @@
             <div class="block-box">
                 <code>$ git branch -a</code>
                 <p>Shows branches on the remote repo.</p>
+                <code>$ git branch -v</code>
+                <p>Shows branches on the local repo.</p>
             </div>
             <div class="block-box">
                 <code>$ git branch branch-name</code>
@@ -292,10 +323,19 @@
             <div class="block-box">
                 <code>$ git checkout branch-name</code>
                 <p>Switches to the named branch.</p>
+                <code>$ git checkout e4ded</code>
+                <p>Switches to the e4ded commit.</p>
             </div>
             <div class="block-box">
-                <code>$ git branch -d/-D branch-name</code>
-                <p>Deletes named branch locally.</p>
+                <code>$ git checkout --force (-f) branch-name</code>
+                <p>Checks out to the branch-name AND all non-commited
+                    changes in the current directory will be lost.</p>
+            </div>
+            <div class="block-box">
+                <code>$ git branch -d branch-name</code>
+                <p>Deletes named MERGED branch locally.</p>
+                <code>$ git branch -D branch-name</code>
+                <p>Deletes named UNMERGED branch locally.</p>
             </div>
             <div class="block-box">
                 <code>$ git push origin --delete branch-name</code>
@@ -306,6 +346,9 @@
     </section>
 
     <section>
+        <!-- /////////////////////////////////////////////// -->
+        <!--                     MERGING                     -->
+        <!-- /////////////////////////////////////////////// -->
         <h3 id="merge">Merge a branch</h3>
         <div class="row commands">
             <div class="block-box">

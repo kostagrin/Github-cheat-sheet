@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #786fa6;
@@ -10,7 +14,7 @@ a {
 html,
 body {
   font-size: 18px;
-  color: #535353;
+  color: rgb(83, 83, 83);
   font-family: "Lato", sans-serif;
 }
 
@@ -134,4 +138,6 @@ code {
   transform: scale(0.95);
   color: #574b90;
   opacity: 0.5;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=compile.css.map */
